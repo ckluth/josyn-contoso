@@ -18,6 +18,6 @@ public sealed class ContosoConfigSource : IConfigSource
     /// <inheritdoc/>
     public Result<string> GetValue(string key)
         => FakeValues.TryGetValue(key, out var value)
-            ? value
+            ? Result<string>.Success(value)
             : Result.Error($"[Contoso] Konfigurationsschlüssel nicht gefunden: '{key}'");
 }
