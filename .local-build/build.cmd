@@ -2,10 +2,6 @@
 CHCP 1252
 setlocal
 
-:: -------------------------------------------------------
-:: Aufruf:  build.cmd [Release|Debug]
-:: Default: Release
-:: -------------------------------------------------------
 set "CONFIGURATION=%~1"
 if not defined CONFIGURATION set "CONFIGURATION=Release"
 
@@ -15,20 +11,18 @@ if /i "%CONFIGURATION%" neq "Release" if /i "%CONFIGURATION%" neq "Debug" (
     exit /b 1
 )
 
-set "SLNX_FILE=%~dp0..\Contoso.Josyn.Adapter.slnx"
-
-echo [INFO] Solution: %SLNX_FILE%
-echo [INFO] Starte dotnet build --configuration %CONFIGURATION% ...
-echo.
-
-dotnet build "%SLNX_FILE%" --configuration %CONFIGURATION%
-
-if %ERRORLEVEL% neq 0 (
-    echo.
-    echo [FEHLER] Build fehlgeschlagen. Exit-Code: %ERRORLEVEL%
-    exit /b %ERRORLEVEL%
-)
+set "LOCAL_BUILD=%~dp0"
 
 echo.
-echo [OK] Build erfolgreich abgeschlossen ^(%CONFIGURATION%^).
+echo === contoso-adapter ===
+call "%LOCAL_BUILD%..\contoso-adapter\.local-build\build.cmd" %CONFIGURATION%
+if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
+
+echo.
+echo === contoso-demo-job ===
+call "%LOCAL_BUILD%..\contoso-demo-job\.local-build\build.cmd" %CONFIGURATION%
+if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
+
+echo.
+echo [OK] Alle Projekte erfolgreich gebaut (%CONFIGURATION%).
 exit /b 0

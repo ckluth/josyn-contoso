@@ -2,15 +2,13 @@
 CHCP 1252
 setlocal
 
-set "NUGET_BASE=%USERPROFILE%\.nuget\packages"
-set "PACKAGE=contoso.josyn.adapter"
+set "LOCAL_BUILD=%~dp0"
 
-if exist "%NUGET_BASE%\%PACKAGE%" (
-    echo Loesche: %NUGET_BASE%\%PACKAGE%
-    rd /s /q "%NUGET_BASE%\%PACKAGE%"
-    if errorlevel 1 ( echo   FEHLER ) else ( echo   OK )
-) else (
-    echo Nicht gefunden, uebersprungen: %NUGET_BASE%\%PACKAGE%
-)
+echo.
+echo === contoso-adapter ===
+call "%LOCAL_BUILD%..\contoso-adapter\.local-build\clean.cmd" NOPAUSE
+if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
-if /i "%~1" neq "NOPAUSE" pause
+echo.
+echo [OK] Clean abgeschlossen.
+exit /b 0

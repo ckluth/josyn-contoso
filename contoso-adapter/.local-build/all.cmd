@@ -6,7 +6,7 @@ set "LOCAL_BUILD=%~dp0"
 
 echo.
 echo === clean ===
-call "%LOCAL_BUILD%clean.cmd"
+call "%LOCAL_BUILD%clean.cmd" NOPAUSE
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
 echo.
