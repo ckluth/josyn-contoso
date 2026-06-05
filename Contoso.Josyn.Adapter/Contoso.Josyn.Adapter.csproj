@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+		<LangVersion>latest</LangVersion>
+		<AssemblyName>Contoso.Josyn.Adapter</AssemblyName>
+		<RootNamespace>Contoso.Josyn.Adapter</RootNamespace>
+		<PlatformTarget>AnyCPU</PlatformTarget>
+		<Version>1.0.0-preview01</Version>
+		<Company>Contoso</Company>
+		<Authors>Contoso</Authors>
+		<Copyright>Copyright © 2026 Contoso</Copyright>
+		<Description>Contoso demo adapter for JOSYN — implements IConfigSource with hardcoded fake values. Demonstrates the ADR-009 adapter pattern.</Description>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="JOSYN.Backend.AdapterContracts" Version="1.0.0-preview01"/>
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="..\Directory.Build.props" Visible="false"/>
+		<None Include="..\nuget.config" Visible="false"/>
+	</ItemGroup>
+</Project>
