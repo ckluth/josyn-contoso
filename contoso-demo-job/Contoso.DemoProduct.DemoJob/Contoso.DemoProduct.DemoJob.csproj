@@ -18,4 +18,10 @@
 		<None Include="..\Directory.Build.props" Visible="false"/>
 		<None Include="..\nuget.config" Visible="false"/>
 	</ItemGroup>
+	<ItemGroup>
+		<Content Include="local-arguments\**\*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<Link>local-arguments\%(RecursiveDir)%(Filename)%(Extension)</Link>
+		</Content>
+	</ItemGroup>
 </Project>
