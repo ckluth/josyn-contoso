@@ -17,7 +17,7 @@
 		<Description>Contoso demo adapter for JOSYN — implements IConfigSource with hardcoded fake values. Demonstrates the ADR-009 adapter pattern.</Description>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="JOSYN.Backend.AdapterContracts" Version="1.0.0-preview01"/>
+		<PackageReference Include="JOSYN.Backend.Contracts" Version="1.0.0-preview01"/>
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="..\Directory.Build.props" Visible="false"/>

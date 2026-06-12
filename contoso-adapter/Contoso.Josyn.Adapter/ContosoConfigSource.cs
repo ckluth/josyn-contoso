@@ -1,4 +1,4 @@
-using JOSYN.Backend.AdapterContracts;
+using JOSYN.Backend.Contracts;
 using JOSYN.Foundation.ResultPattern;
 
 namespace Contoso.Josyn.Adapter;
