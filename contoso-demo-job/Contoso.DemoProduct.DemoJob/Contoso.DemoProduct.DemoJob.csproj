@@ -10,6 +10,7 @@
 		<AssemblyName>Contoso.DemoProduct.DemoJob</AssemblyName>
 		<RootNamespace>Contoso.DemoProduct.DemoJob</RootNamespace>
 		<PlatformTarget>AnyCPU</PlatformTarget>
+		<Version>1.0.0-preview01</Version>
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="JOSYN.JobHost" Version="1.0.0-preview01"/>
