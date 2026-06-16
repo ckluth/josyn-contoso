@@ -5,8 +5,8 @@ setlocal
 set "LOCAL_BUILD=%~dp0"
 
 echo.
-echo === contoso-adapter ===
-call "%LOCAL_BUILD%..\contoso-adapter\.local-build\clean.cmd" NOPAUSE
+echo === contoso-identity-adapter ===
+call "%LOCAL_BUILD%..\contoso-identity-adapter\.local-build\clean.cmd" NOPAUSE
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
 echo.

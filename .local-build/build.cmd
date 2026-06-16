@@ -14,8 +14,8 @@ if /i "%CONFIGURATION%" neq "Release" if /i "%CONFIGURATION%" neq "Debug" (
 set "LOCAL_BUILD=%~dp0"
 
 echo.
-echo === contoso-adapter ===
-call "%LOCAL_BUILD%..\contoso-adapter\.local-build\build.cmd" %CONFIGURATION%
+echo === contoso-identity-adapter ===
+call "%LOCAL_BUILD%..\contoso-identity-adapter\.local-build\build.cmd" %CONFIGURATION%
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
 echo.
