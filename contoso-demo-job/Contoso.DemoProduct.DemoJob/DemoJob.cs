@@ -9,6 +9,12 @@ public static class DemoJob
     {
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine($"{JOSYN.JobHost.CurrentJob.Name} successfully invoked on {JOSYN.JobHost.CurrentJob.Environment}");
+        
+        for (var i = 0; i < 5; i++)
+        {
+            Console.Write(".");
+            Thread.Sleep(1000);
+        }
         Console.ResetColor();
         
         return new DemoResult
