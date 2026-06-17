@@ -16,6 +16,7 @@ internal class Program
             return FailWith($"Failed to load credentials: {load.ErrorMessage}");
 
         var result = await PipesServer.RunAsync(BuildServerArgs(sessionGuid, BuildDispatcher(load.Value)));
+        
         return result.Succeeded ? 0 : 1;
 
         // ── helpers ───────────────────────────────────────────────────────
@@ -53,7 +54,7 @@ internal class Program
         new()
         {
             ConnectionTimeout       = TimeSpan.FromMinutes(30),
-            HandleStringRequest     = req => dispatcher.Dispatch(req),
+            HandleStringRequest     = dispatcher.Dispatch,
             SessionKey              = sessionGuid,
             HandleErrorNotification = (req, ex) =>
             {
