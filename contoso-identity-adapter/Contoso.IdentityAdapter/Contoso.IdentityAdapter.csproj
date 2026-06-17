@@ -17,7 +17,7 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<PackageReference Include="JOSYN.Foundation.JIP"                    Version="1.0.0-preview01"/>
-		<PackageReference Include="JOSYN.Backend.IdentityAdapter.Contract"  Version="1.0.0-preview01"/>
+		<PackageReference Include="JOSYN.Adapter.IdentityAdapter.Contract"  Version="1.0.0-preview01"/>
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="..\Directory.Build.props" Visible="false"/>

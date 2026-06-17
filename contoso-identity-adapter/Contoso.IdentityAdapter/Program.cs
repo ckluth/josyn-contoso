@@ -1,4 +1,4 @@
-using JOSYN.Backend.IdentityAdapter.Contract;
+using JOSYN.Adapter.IdentityAdapter.Contract;
 using JOSYN.Foundation.JIP;
 using JOSYN.Foundation.ResultPattern;
 
