@@ -9,7 +9,8 @@ public static class DemoJob
     {
         Console.ForegroundColor = ConsoleColor.Green;
         Console.WriteLine($"{JOSYN.JobHost.CurrentJob.Name} successfully invoked on {JOSYN.JobHost.CurrentJob.Environment}");
-        
+        Console.WriteLine($"technical-user: {Environment.UserName}");
+
         for (var i = 0; i < 5; i++)
         {
             Console.Write(".");
