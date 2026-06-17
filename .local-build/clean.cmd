@@ -10,5 +10,10 @@ call "%LOCAL_BUILD%..\contoso-identity-adapter\.local-build\clean.cmd" NOPAUSE
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
 echo.
+echo === contoso-configuration-adapter ===
+call "%LOCAL_BUILD%..\contoso-configuration-adapter\.local-build\clean.cmd" NOPAUSE
+if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
+
+echo.
 echo [OK] Clean abgeschlossen.
 exit /b 0

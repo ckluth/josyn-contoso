@@ -19,6 +19,11 @@ call "%LOCAL_BUILD%..\contoso-identity-adapter\.local-build\build.cmd" %CONFIGUR
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
 
 echo.
+echo === contoso-configuration-adapter ===
+call "%LOCAL_BUILD%..\contoso-configuration-adapter\.local-build\build.cmd" %CONFIGURATION%
+if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
+
+echo.
 echo === contoso-demo-job ===
 call "%LOCAL_BUILD%..\contoso-demo-job\.local-build\build.cmd" %CONFIGURATION%
 if %ERRORLEVEL% neq 0 exit /b %ERRORLEVEL%
